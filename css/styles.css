@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+     display: grid;
+     grid-gap: 5px;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+     "wlcm"
+     "ltst"
+     "blogs"
+    }
+/*                       Welcome Portion Styles                   */
+.welcome {
+  font-family: 'Raleway', sans-serif;
+  grid-area: wlcm;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+/*                         Header Styles                        */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+}
+
+.header img {
+  justify-content: flex-start;
+  width: 70px;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 5px 5px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar a:hover {
+  color: #a4a4a4;
+}
+
+/*                     Latest Portion Styles                     */
+.latest {
+  grid-area: ltst;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ltsth2 ltsth2 ltsth2 ltsth2"
+  "news1img news1 news1 news1";
+  border-bottom: 2px solid black;
+}
+
+.latest h2 {
+  padding: 10px 10px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  grid-area: ltsth2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.latest h4 {
+  grid-area: news1;
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  background-color: grey;
+}
+
+.latest img {
+  grid-area: news1img;
+  background-color: grey;
+  width: 180px;
+  height: 180px;
+  padding: 5px 5px;
+}
+
+/*                       Blogs Portion Styles                  */
+.blogs {
+  grid-area: blogs;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 5px;
+}
+
+.blogcard1 {
+background-color: grey;
+}
+.blogcard2 {
+background-color: grey;
+}
+.blogcard3{
+background-color: grey;
+}
+.blogcard4{
+background-color: grey;
+}
+.blogs img {
+  width: 350px;
+  height: 220px;
+}
+/*                    Footer Portion Styles                     */
+.footer {
+  border: 4px double black;
+  grid-column: 1fr;
+  grid-area: ft;
+  justify-self: stretch;
+}
+
+.logofoot {
+  padding-top: 5px;
+  justify-content: center;
+  display: flex;
+}
+
+.logofoot img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer h4 {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+}
+/*                   Responsive larger Screen Styles               */
+@media(min-width:900px){
+  .container {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr 1fr 1fr 1fr 80px;
+      grid-template-areas:
+      ". wlcm wlcm wlcm ltst ltst ."
+      ". blogs blogs blogs blogs blogs ."
+    }
+}
