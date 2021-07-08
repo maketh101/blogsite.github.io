@@ -129,8 +129,7 @@ background-color: grey;
 /*                    Footer Portion Styles                     */
 .footer {
   border: 4px double black;
-  grid-column: 1fr;
-  grid-area: ft;
+  width: 100%;
   justify-self: stretch;
 }
 
