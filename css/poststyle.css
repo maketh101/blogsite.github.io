@@ -8,6 +8,11 @@
 
 body {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hdr"
+    "container"
+    "ft";
     }
 
 .container {
@@ -24,6 +29,8 @@ body {
 
 /*                         Header Styles                        */
 .header {
+  grid-area: hdr;
+  justify-self: stretch;
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -208,6 +215,7 @@ background-color: grey;
 }
 /*                    Footer Portion Styles                     */
 .footer {
+  grid-area: ft;
   margin-top: 5px;
   border: 4px double black;
   width: 100%;
