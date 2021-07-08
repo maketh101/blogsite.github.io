@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+    }
 
 .container {
      display: grid;
