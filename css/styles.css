@@ -7,8 +7,14 @@
 }
 body {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hdr"
+    "contain"
+    "ft";
      }
 .container {
+     grid-area: contain;
      display: grid;
      grid-gap: 5px;
      grid-template-columns: 1fr;
@@ -26,6 +32,8 @@ body {
 }
 /*                         Header Styles                        */
 .header {
+  grid-area: hdr;
+  justify-self: stretch;
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -160,6 +168,8 @@ background-color: grey;
 }
 
 .footer p {
+  grid-area: ft;
+  justify-self: stretch;
   display: flex;
   justify-content: center;
   padding-bottom: 5px;
